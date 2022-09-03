@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2>Chain List</h2>
+<div class="center">
+  {% for chain in chain_list %}
+  <a href="{% url 'chain_detail' chain.id %}">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ chain.name }}</span>
+        <p>
+          Color:
+          <span style="color: {{ chain.number }} ">{{ chain.name }}</span>
+        </p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}
